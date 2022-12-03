@@ -52,7 +52,7 @@ class OscInputMonitor(QObject):
 		server.serve_forever()  # Blocks forever
 
 
-class behavControlGui(QMainWindow):
+class MainGui(QMainWindow):
 	def __init__(self, parent=None):
 		QWidget.__init__(self, parent)
 		self.ui = Ui_MainWindow()
@@ -89,7 +89,7 @@ class behavControlGui(QMainWindow):
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	myapp = behavControlGui()
+	myapp = MainGui()
 	myapp.show()
 	sys.exit(app.exec())
 
